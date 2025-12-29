@@ -1,0 +1,11 @@
+API user
+
+SDK
+
+validation par pydentic
+
+FASTApi
+
+SQLAlchemy
+
+SQLite 
