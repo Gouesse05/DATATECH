@@ -2,11 +2,11 @@ from fastapi import FastAPI, Depends, HTTPException, Query, Path
 from sqlalchemy.orm import Session
 from typing import List, Optional
 
-import models
+from .import models
 
 # Films
 
-def get_movies(db: Session, movie_id: int):
+def get_movie(db: Session, movie_id: int):
     """Récupère un film par son ID."""
     return db.query(models.Movie).filter(models.Movie.movieId == movie_id).first()
 
@@ -27,7 +27,6 @@ def get_rating(db: Session, user_id: int, movie_id: int):
         models.Rating.userId == user_id,
         models.Rating.movieId == movie_id
     ).first()
-
 
 def get_ratings(db: Session, skip: int = 0, limit: int = 100, movies_id: int = None, user_id: int = None, min_rating: float = None, max_rating: float = None):
     """Récupère une liste d'évaluations avec filtre optionnelles."""
