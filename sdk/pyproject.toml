@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=78.1.0"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "filmsapisdk"
+version = "0.0.1"
+
+authors = [
+{ name="[Gouesse GO]" },
+]
+description = "SDK python pour acceder MovieLens API (Data Analysts/Data scientists friendly)"
+requires-python = ">=3.12"
+classifiers = [
+"Development Status :: 3 - Alpha",
+"Programming Language :: Python :: 3",
+"License :: OSI Approved :: MIT License",
+"Operating System :: OS Independent",
+]
+dependencies = [
+'httpx>=0.24.1',
+'pydantic>=2.12.4',
+'numpy>=2.2.4',
+'pandas>=2.2.3',
+'backoff>=2.2.1',
+'python-dotenv',
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

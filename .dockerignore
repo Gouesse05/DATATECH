@@ -22,3 +22,7 @@ tests/
 
 # Logs
 *.log
+
+*.egg-info/
+*.egg
+*.whl
