@@ -9,7 +9,7 @@ Le projet combine :
 
 ---
 
-## 🎯 Objectifs du projet
+## Objectifs du projet
 
 - Construire une **API backend robuste** pour exposer des données films
 - Centraliser et structurer des **données cinéma**
@@ -21,15 +21,46 @@ Le projet combine :
 
 ---
 
-## 🧱 Architecture (prévisionnelle)
+## Architecture (prévisionnelle)
 
 ```text
 DATATECH/
-├── src/
-│   ├── api/            # Backend / API (FastAPI)
-│   ├── analytics/      # Analyses, notebooks, scripts data
-│   └── main.py
-├── notebooks/          # Jupyter notebooks (exploration)
-├── requirements.txt
+.
+├── api
+│   ├── database.py
+│   ├── __init__.py
+│   ├── main.py
+│   ├── models.py
+│   ├── movies.db
+│   ├── query_helpers.py
+│   ├── README.md
+│   ├── schemas.py
+│   ├── test_models.py
+│   └── test_query_helper.py
+├── architecture.txt
+├── data
+│   ├── links.csv
+│   ├── movies.csv
+│   ├── ratings.csv
+│   ├── README.txt
+│   └── tags.csv
+├── Dockerfile
+├── movies.db
+├── pooo.py
 ├── README.md
-└── .gitignore
+├── requirements.txt
+└── sdk
+    ├── dist
+    │   ├── filmsapisdk-0.0.2-py3-none-any.whl
+    │   └── filmsapisdk-0.0.2.tar.gz
+    ├── pyproject.toml
+    ├── README.md
+    ├── src
+    │   └── filmsapisdk
+    │       ├── film_client.py
+    │       ├── film_config.py
+    │       ├── __init__.py
+    │       └── schemas
+    │           ├── __init__.py
+    │           └── modos.py
+    └── test_sdk.py
