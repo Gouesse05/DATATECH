@@ -1,4 +1,4 @@
-from filmapisdk import MovieClient, MovieConfig
+from filmsapisdk import MovieClient, MovieConfig
 import pandas as pd
 
 
